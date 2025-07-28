@@ -1,168 +1,84 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
-body {
-  font-family: "Poppins", sans-serif;
-  background: #fff;
-  text-align: center;
-  padding: 50px 20px;
-  color: #333;
-}
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
 
-h1 {
-  color: #049edb;
-  font-size: 2.5em;
-  margin-bottom: 20px;
-}
+    body {
+      font-family: 'Montserrat', sans-serif;
+      background: linear-gradient(to right, #e8f5e9, #f1f8e9);
+      color: #333;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 40px 20px;
+    }
 
-.instructions {
-  background: #e8f5e9;
-  border-left: 5px solid #4caf50;
-  padding: 20px 40px;
-  margin: 30px auto;
-  text-align: left;
-  max-width: 800px;
-  border-radius: 6px;
-}
+    .card {
+      background: #ffffff;
+      padding: 40px;
+      border-radius: 12px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+      max-width: 700px;
+      width: 100%;
+      text-align: center;
+    }
 
-.instructions h2 {
-  color: crimson;
-  font-size: 2em;
-  margin-top: 0;
-}
+    .card h1 {
+      font-size: 26px;
+      margin-bottom: 20px;
+      color: #2e7d32;
+    }
 
-.instructions ul {
-  line-height: 1.6;
-  font-size: 1.3em;
-  padding-left: 20px;
-}
+    .card h2 {
+      font-size: 20px;
+      margin-bottom: 10px;
+      font-weight: 600;
+      color: #444;
+    }
 
-/* sliding notification */
-.slide-notification {
-  position: fixed;
-  top: 20px;
-  left: -100%;
-  background-color: crimson;
-  color: #fff;
-  padding: 15px 30px;
-  font-family: "Poppins";
-  font-size: 16px;
-  font-weight: 700;
-  border-radius: 5px;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-  animation: slideIn 0.5s forwards;
-}
+    .highlight {
+      color: crimson;
+      font-weight: bold;
+    }
 
-@keyframes slideIn {
-  to {
-    left: 20px;
-  }
-}
+    .emoji {
+      font-size: 22px;
+      margin-left: 8px;
+    }
 
-.button {
-  display: inline-block;
-  padding: 20px 40px;
-  margin: 20px;
-  font-size: 1.2em;
-  color: white;
-  background-color: #049edb;
-  border: none;
-  border-radius: 8px;
-  cursor: pointer;
-  text-decoration: none;
-  transition: background-color 0.3s;
-}
+    .button {
+      display: inline-block;
+      margin-top: 30px;
+      padding: 16px 36px;
+      font-size: 18px;
+      background: #2e7d32;
+      color: #fff;
+      border: none;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
 
-.button:hover {
-  background-color: #87CEEB;
-  color: #333;
-}
+    .button:hover {
+      background: #1b5e20;
+    }
 
-.container {
-  margin-top: 30px;
-}
+    @media (max-width: 600px) {
+      .card h1 {
+        font-size: 22px;
+      }
 
-/* MEDIA QUERIES FOR RESPONSIVENESS */
+      .card h2 {
+        font-size: 18px;
+      }
 
-/* Small devices (phones, less than 600px) */
-@media only screen and (max-width: 600px) {
-  body {
-    padding: 30px 10px;
-  }
-
-  h1 {
-    font-size: 1.8em;
-  }
-
-  .instructions {
-    padding: 15px 20px;
-  }
-
-  .instructions h2 {
-    font-size: 1.5em;
-  }
-
-  .instructions ul {
-    font-size: 1em;
-  }
-
-  .button {
-    padding: 15px 30px;
-    font-size: 1em;
-  }
-
-  .slide-notification {
-    font-size: 14px;
-    padding: 10px 20px;
-  }
-}
-
-/* Medium devices (tablets, 600px to 992px) */
-@media only screen and (min-width: 601px) and (max-width: 992px) {
-  h1 {
-    font-size: 2em;
-  }
-
-  .instructions {
-    padding: 20px 30px;
-  }
-
-  .instructions h2 {
-    font-size: 1.7em;
-  }
-
-  .instructions ul {
-    font-size: 1.1em;
-  }
-
-  .button {
-    padding: 18px 36px;
-    font-size: 1.1em;
-  }
-
-  .slide-notification {
-    font-size: 15px;
-  }
-}
-
-/* Large screens (desktops, 993px and up) */
-@media only screen and (min-width: 993px) {
-  h1 {
-    font-size: 2.5em;
-  }
-
-  .instructions {
-    max-width: 800px;
-  }
-
-  .instructions h2 {
-    font-size: 2em;
-  }
-
-  .instructions ul {
-    font-size: 1.3em;
-  }
-
-  .button {
-    font-size: 1.2em;
-  }
-}
+      .button {
+        width: 100%;
+      }
+    }
